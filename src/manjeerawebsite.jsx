@@ -1,60 +1,56 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const courses = [
-              {
-                title: "IIT & AI Classes",
-                description: "Our IIT & AI classes offer expert guidance and structured learning to help students excel in competitive exams and advance their knowledge in engineering and artificial intelligence.",
-                image: "https://images.unsplash.com/photo-1560785496-3c9d27877182?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              },
-              {
-                title: "Robotics",
-                description: "Our Robotics classes focus on practical learning and problem-solving to help students build skills in automation, control systems, and intelligent machines.",
-                image: "https://media.istockphoto.com/id/1344988472/photo/happy-teacher-and-students-claps-as-their-robotic-car-model-successfully-works.webp?a=1&b=1&s=612x612&w=0&k=20&c=Az4GAwmNXE1ken9HJ96A5O0Q7VUPlKyS9tN_D_Ow-9w="
-              },
-              {
-                title: "Sports Education",
-                description: "Our sports program focuses on physical fitness, teamwork, and developing sportsmanship among students.",
-                image: "https://media.istockphoto.com/id/1146896078/photo/teachers-cheering-student-playing-tug-of-war.webp?a=1&b=1&s=612x612&w=0&k=20&c=WUKGrhhNP0yJEchQXzHY0nfV_zeCwVoR80vT_HNnNsA="
-              }
-            ];
+const activities = [
+  { title: "Dance", description: "Learn various dance forms and express yourself creatively through movement and rhythm.", image: "Dance.jpeg" },
+  { title: "Music", description: "Discover the world of music with instrument training, vocal lessons, and music theory.", image: "Music.jpeg" },
+  { title: "Robotics & AI", description: "Build and program robots to solve challenges and Explore the fundamentals of Artificial Intelligence.", image: "Robotics.jpeg" },
+  { title: "Sports", description: "Our sports programs promote physical health, discipline, and a spirit of sportsmanship.", image: "Sports.jpeg" },
+  { title: "Abacus Classes", description: "Develop mental math skills and improve concentration with our Abacus training.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSIjjZ3WThvZ8-isCAt3Rdd2SR4a6GzAFMOg&s" }
+];
+
+const programs = [
+  { title: "Pre-Primary", description: "A nurturing environment for our youngest learners to build foundational skills.", image: "Pre-primary.jpeg" },
+  { title: "Primary", description: "Focus on core subjects while encouraging curiosity and independent thinking.", image: "Primary.jpeg" },
+  { title: "Secondary", description: "A rigorous curriculum designed to prepare students for higher education and professional life.", image: "Secondary.jpeg" }
+];
 
 const achievements = [
-              {
-                icon: "fas fa-trophy",
-                title: "Academic Excellence",
-                description: "95% of our students scored above 90% in CBSE Board Exams 2023"
-              },
-              {
-                icon: "fas fa-medal",
-                title: "Sports Champions",
-                description: "Played in State Level Sports Championship"
-              },
-              {
-                icon: "fas fa-paint-brush",
-                title: "Arts & Culture",
-                description: "National level recognition in painting and music competitions"
-              }
-            ]
+  {
+    icon: "fas fa-trophy",
+    title: "Academic Excellence",
+    description: "95% of our students scored above 90% in State Board Exams"
+  },
+  {
+    icon: "fas fa-medal",
+    title: "Sports Champions",
+    description: "Played in State Level Sports Championship"
+  },
+  {
+    icon: "fas fa-paint-brush",
+    title: "Arts & Culture",
+    description: "State level recognition in painting and music competitions"
+  }
+]
 const news = [
-              {
-                date: "June 15, 2023",
-                title: "Annual Day Celebration",
-                description: "Our annual day celebration was a grand success with students showcasing their talents in various performances.",
-                image: "https://images.unsplash.com/photo-1633338718293-785082123de7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHNjaG9vbCUyMGFubnVhbCUyMGRheSUyMGluZGlhbnxlbnwwfHwwfHx8MA%3D%3D"
-              },
-              {
-                date: "July 22, 2023",
-                title: "Science Fair Winners",
-                description: "Our students won 3 prizes at the Regional Science Fair showcasing innovative projects.",
-                image: "https://media.istockphoto.com/id/2160438317/photo/proud-schoolboy-wins-the-award-for-best-science-project-at-elementary-school.webp?a=1&b=1&s=612x612&w=0&k=20&c=yem1lijZp7tUllfDkNtPzj8saIVD1OhmikF4zCY3g0s="
-              },
-              {
-                date: "August 10, 2023",
-                title: "Annual Sports Day",
-                description: "Annual sports day was conducted with great enthusiasm and participation from students.",
-                image: "https://media.istockphoto.com/id/1148219796/photo/teachers-applauding-for-student-at-awards-ceremony.webp?a=1&b=1&s=612x612&w=0&k=20&c=okL1qjTCi7BzIXnAqEwjRiQK4V_L4ytp3z9OxGZykY4="
-              }
-            ]
+  {
+    date: "June 15, 2023",
+    title: "Annual Day Celebration",
+    description: "Our annual day celebration was a grand success with students showcasing their talents in various performances.",
+    image: "Annual.jpeg"
+  },
+  {
+    date: "July 22, 2023",
+    title: "Science Fair Winners",
+    description: "Our students won 3 prizes at the Regional Science Fair showcasing innovative projects.",
+    image: "Science.jpeg"
+  },
+  {
+    date: "August 10, 2023",
+    title: "Annual Sports Day",
+    description: "Annual sports day was conducted with great enthusiasm and participation from students.",
+    image: "Sports-day.jpeg"
+  }
+]
 
 const ManjeeraSchoolWebsite = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -136,8 +132,6 @@ const ManjeeraSchoolWebsite = () => {
         }
         
         .hero-bg {
-          background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(26, 75, 140, 0.8)), 
-                     url('https://plus.unsplash.com/premium_photo-1682955296259-65540591f0c4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
           position: relative;
           overflow: hidden;
         }
@@ -372,7 +366,7 @@ const ManjeeraSchoolWebsite = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center animate-on-scroll fade-in-left">
-              <div className='h-[80px] w-[80px] mr-4'>
+              <div className='h-[60px] w-[60px] mr-4'>
                 <img src="logo.png" alt="Manjeera High School Logo" className="h-15 w-full object-cover rounded-full" />
               </div>
               <div>
@@ -418,20 +412,37 @@ const ManjeeraSchoolWebsite = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="hero-bg text-white py-[10rem] text-center relative" id='home'>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="hero-text">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Welcome to Manjeera High School</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">Nurturing young minds with quality education, values, and skills for a better tomorrow.</p>
-          </div>
-          <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center hero-buttons">
-            <a href='#video' className="bg-orange-500 hover:bg-transparent hover:border-orange-500 text-white font-semibold py-3 px-8 rounded-full border-2 border-orange-500 transition-all duration-300 inline-block transform hover:scale-105">
-              Explore Our Campus
-            </a>
-            <a href='#contact' className="bg-transparent hover:bg-white hover:text-blue-900 text-white font-semibold py-3 px-8 rounded-full border-2 border-white transition-all duration-300 inline-block transform hover:scale-105">
-              Apply Now
-            </a>
-          </div>
+      <section className="relative h-screen w-full flex items-center justify-center text-white" id="home">
+        {/* Background Video */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="video-thumbnail.png"
+        >
+          <source src="manjeera school.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Dark Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+            Manjeera High School
+          </h2>
+          <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-lg">
+            Nurturing young minds
+          </p>
+          <a
+            href="#contact"
+            className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-semibold shadow-lg"
+          >
+            Get in Touch
+          </a>
         </div>
       </section>
 
@@ -449,11 +460,10 @@ const ManjeeraSchoolWebsite = () => {
                 We believe in nurturing young minds through a holistic approach that balances academic rigor with character development.
               </p>
               <p className="text-gray-600 mb-4">
-                Our campus spans 10 acres with state-of-the-art facilities including smart classrooms, science and computer labs, 
-                a well-stocked library, and extensive sports facilities.
+                Our campus has state-of-the-art facilities including smart classrooms, science and computer labs, and extensive sports facilities.
               </p>
               <p className="text-gray-600 mb-6">
-                We follow the CBSE curriculum while incorporating innovative teaching methodologies that encourage critical thinking, 
+                We follow the State Board curriculum while incorporating innovative teaching methodologies that encourage critical thinking, 
                 creativity, and collaboration among students.
               </p>
               <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
@@ -464,56 +474,71 @@ const ManjeeraSchoolWebsite = () => {
         </div>
       </section>
 
-      {/* At a Glance Video Section */}
-      <section id='video' className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-center mb-8 text-blue-900 animate-on-scroll fade-in-down">At a Glance</h2>
-          <p className="text-lg mb-8 text-gray-600 animate-on-scroll fade-in-up">Take a quick look at Manjeera School – our values, facilities, and vibrant campus life.</p>
-          <div className="mx-auto animate-on-scroll scale-in">
-            <div className="relative w-full mx-auto" style={{paddingBottom: '56.25%'}}>
-              <video 
-                controls 
-                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
-                poster="video-thumbnail.png"
-              >
-                <source src="manjeera school.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+      {/* Academics Section */}
+      <section id="academics" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-on-scroll fade-in-down">
+            <h2 className="text-3xl font-bold text-blue-900 mb-4 relative inline-block">
+              Extracurricular Activities
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Engage, explore, and excel beyond the classroom with our diverse activities.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {activities.map((activity, index) => {
+              let animationClass = "fade-in-up";
+              if (index % 3 === 0) {
+                animationClass = "fade-in-left";
+              } else if (index % 3 === 2) {
+                animationClass = "fade-in-right";
+              }
+              return(
+                <div key={index} className={`bg-gray-50 rounded-lg overflow-hidden shadow-lg card-hover animate-on-scroll ${animationClass}`} style={{'--stagger': index}}>
+                  <div className="h-48 overflow-hidden">
+                    <img src={activity.image} alt={activity.title} className="w-full h-full object-cover image-zoom" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-blue-900 mb-3">{activity.title}</h3>
+                    <p className="text-gray-600">{activity.description}</p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Academics Section */}
-      <section id="academics" className="py-20 bg-gray-50">
+      <section id="programs" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll fade-in-down">
             <h2 className="text-3xl font-bold text-blue-900 mb-4 relative inline-block">
-              Academic Excellence
-              <div className="absolute -bottom-3 left-1/4 w-1/2 h-1 bg-orange-500"></div>
+              Our Programs
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">We provide a comprehensive curriculum that prepares students for future challenges</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              We offer a structured educational journey for every stage of your child's growth.
+            </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {courses.map((course, index) => {
-              const animationClass =
-                index === 0
-                  ? "fade-in-left"
-                  : index === courses.length - 1
-                  ? "fade-in-right"
-                  : "fade-in-up";
+            {programs.map((program, index) => {
+              let animationClass = "fade-in-up";
+              if (index % 3 === 0) {
+                animationClass = "fade-in-left";
+              } else if (index % 3 === 2) {
+                animationClass = "fade-in-right";
+              }
               return(
-              <div key={index} className={`bg-white rounded-lg overflow-hidden shadow-lg card-hover animate-on-scroll ${animationClass}`} style={{'--stagger': index}}>
-                <div className="h-48 overflow-hidden">
-                  <img src={course.image} alt={course.title} className="w-full h-full object-cover image-zoom" />
+                <div key={index} className={`bg-white rounded-lg overflow-hidden shadow-lg card-hover animate-on-scroll ${animationClass}`} style={{'--stagger': index}}>
+                  <div className="h-48 overflow-hidden">
+                    <img src={program.image} alt={program.title} className="w-full h-full object-cover image-zoom" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-blue-900 mb-3">{program.title}</h3>
+                    <p className="text-gray-600">{program.description}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-900 mb-3">{course.title}</h3>
-                  <p className="text-gray-600">{course.description}</p>
-                </div>
-              </div>
-            )})}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -524,7 +549,6 @@ const ManjeeraSchoolWebsite = () => {
           <div className="text-center mb-16 animate-on-scroll fade-in-down">
             <h2 className="text-3xl font-bold text-blue-900 mb-4 relative inline-block">
               Student Achievements
-              <div className="absolute -bottom-3 left-1/4 w-1/2 h-1 bg-orange-500"></div>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">Our students consistently excel in various fields and bring pride to our institution</p>
           </div>
@@ -549,7 +573,6 @@ const ManjeeraSchoolWebsite = () => {
           <div className="text-center mb-16 animate-on-scroll fade-in-down">
             <h2 className="text-3xl font-bold text-blue-900 mb-4 relative inline-block">
               School News & Events
-              <div className="absolute -bottom-3 left-1/4 w-1/2 h-1 bg-orange-500"></div>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">Stay updated with the latest happenings at Manjeera High School</p>
           </div>
