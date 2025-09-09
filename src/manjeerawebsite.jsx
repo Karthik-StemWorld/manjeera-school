@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 const activities = [
-  { title: "Dance", description: "Learn various dance forms and express yourself creatively through movement and rhythm.", image: "Dance.jpeg" },
-  { title: "Music", description: "Discover the world of music with instrument training, vocal lessons, and music theory.", image: "Music.jpeg" },
-  { title: "Robotics & AI", description: "Build and program robots to solve challenges and Explore the fundamentals of Artificial Intelligence.", image: "Robotics.jpeg" },
-  { title: "Sports", description: "Our sports programs promote physical health, discipline, and a spirit of sportsmanship.", image: "Sports.jpeg" },
+  { title: "Dance", description: "Learn various dance forms and express yourself creatively through movement and rhythm.", image: "manjeera-school/Dance.jpeg" },
+  { title: "Music", description: "Discover the world of music with instrument training, vocal lessons, and music theory.", image: "manjeera-school/Music.jpeg" },
+  { title: "Robotics & AI", description: "Build and program robots to solve challenges and Explore the fundamentals of Artificial Intelligence.", image: "manjeera-school/Robotics.jpeg" },
+  { title: "Sports", description: "Our sports programs promote physical health, discipline, and a spirit of sportsmanship.", image: "manjeera-school/Sports.jpeg" },
   { title: "Abacus Classes", description: "Develop mental math skills and improve concentration with our Abacus training.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSIjjZ3WThvZ8-isCAt3Rdd2SR4a6GzAFMOg&s" }
 ];
 
 const programs = [
-  { title: "Pre-Primary", description: "A nurturing environment for our youngest learners to build foundational skills.", image: "Pre-primary.jpeg" },
-  { title: "Primary", description: "Focus on core subjects while encouraging curiosity and independent thinking.", image: "Primary.jpeg" },
-  { title: "Secondary", description: "A rigorous curriculum designed to prepare students for higher education and professional life.", image: "Secondary.jpeg" }
+  { title: "Pre-Primary", description: "A nurturing environment for our youngest learners to build foundational skills.", image: "manjeera-school/Pre-primary.jpeg" },
+  { title: "Primary", description: "Focus on core subjects while encouraging curiosity and independent thinking.", image: "manjeera-school/Primary.jpeg" },
+  { title: "Secondary", description: "A rigorous curriculum designed to prepare students for higher education and professional life.", image: "manjeera-school/Secondary.jpeg" }
 ];
 
 const achievements = [
@@ -33,23 +33,23 @@ const achievements = [
 ]
 const news = [
   {
-    date: "June 15, 2023",
+   
     title: "Annual Day Celebration",
     description: "Our annual day celebration was a grand success with students showcasing their talents in various performances.",
-    image: "Annual.jpeg"
+    image: "manjeera-school/Annual.jpeg"
   },
   {
-    date: "July 22, 2023",
+   
     title: "Science Fair Winners",
     description: "Our students won 3 prizes at the Regional Science Fair showcasing innovative projects.",
-    image: "Science.jpeg"
+    image: "manjeera-school/Science.jpeg"
   },
   {
-    date: "August 10, 2023",
+    
     title: "Annual Sports Day",
     description: "Annual sports day was conducted with great enthusiasm and participation from students.",
-    image: "Sports-day.jpeg"
-  }
+    image: "manjeera-school/Annual.jpeg"
+  },
 ]
 
 const ManjeeraSchoolWebsite = () => {
@@ -132,24 +132,77 @@ const ManjeeraSchoolWebsite = () => {
         }
         
         .hero-bg {
+          background: linear-gradient(
+              rgba(26, 75, 140, 0.85),
+              rgba(26, 75, 140, 0.85)
+            ),
+            url("manjeera-school/Manjeera.jpeg") center/cover no-repeat;
           position: relative;
           overflow: hidden;
+          animation: fadeInBg 1.5s ease-in-out;
         }
-        
+
         .hero-bg::before {
-          content: '';
+          content: "";
           position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+          inset: 0;
+          background: radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%
+          );
           animation: shimmer 3s ease-in-out infinite alternate;
+          pointer-events: none;
         }
-        
-        @keyframes shimmer {
-          0% { opacity: 0.5; }
-          100% { opacity: 1; }
+
+        /* Fade-in Background */
+        @keyframes fadeInBg {
+          from {
+            opacity: 0;
+            transform: scale(1.05);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        /* Existing Animations */
+        .hero-text {
+          animation: heroFadeIn 1.2s ease-out;
+        }
+
+        @keyframes heroFadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .hero-buttons {
+          animation: heroButtonsIn 1.5s ease-out 0.3s both;
+        }
+
+        @keyframes heroButtonsIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 640px) {
+          .hero-bg {
+            background-position: top center;
+          }
         }
         
         .testimonials-bg {
@@ -264,24 +317,6 @@ const ManjeeraSchoolWebsite = () => {
           transform: translate(0) scale(1);
         }
         
-        .hero-text {
-          animation: heroFadeIn 1.2s ease-out;
-        }
-        
-        @keyframes heroFadeIn {
-          0% { opacity: 0; transform: translateY(30px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        
-        .hero-buttons {
-          animation: heroButtonsIn 1.5s ease-out 0.3s both;
-        }
-        
-        @keyframes heroButtonsIn {
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        
         .floating {
           animation: floating 3s ease-in-out infinite;
         }
@@ -367,7 +402,7 @@ const ManjeeraSchoolWebsite = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center animate-on-scroll fade-in-left">
               <div className='h-[60px] w-[60px] mr-4'>
-                <img src="logo.png" alt="Manjeera High School Logo" className="h-15 w-full object-cover rounded-full" />
+                <img src="manjeera-school/logo.png" alt="Manjeera High School Logo" className="h-15 w-full object-cover rounded-full" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold">Manjeera High School</h1>
@@ -412,70 +447,223 @@ const ManjeeraSchoolWebsite = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center justify-center text-white" id="home">
-        {/* Background Video */}
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="video-thumbnail.png"
+      <section
+  className="relative h-screen w-full flex flex-col lg:flex-row items-center justify-between overflow-hidden hero-bg"
+  id="home"
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/40 z-0"></div>
+
+  {/* Left Column - Hero Content */}
+  <div className="relative z-10 w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-10 lg:p-16">
+    <div className="text-white max-w-xl hero-text">
+      {/* School Title */}
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">
+        Manjeera High School
+      </h2>
+
+      {/* Tagline */}
+      <p className="text-lg sm:text-xl md:text-2xl mb-6 text-blue-100 font-medium drop-shadow">
+        Nurturing Young Minds
+      </p>
+
+      {/* About */}
+      <div className="mb-6 space-y-4 text-sm sm:text-base text-blue-50">
+        <p>
+          Established in 1995, we've been a beacon of excellence in education
+          for over 25 years, nurturing young minds through a holistic approach
+          that balances academics with character development.
+        </p>
+        <p>
+          Our campus features smart classrooms, science & computer labs, and
+          extensive sports facilities.
+        </p>
+        <p>
+          We follow the State Board curriculum with innovative teaching
+          methodologies that encourage creativity and collaboration.
+        </p>
+      </div>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 hero-buttons">
+        <a
+          href="#contact"
+          className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-semibold shadow-lg text-center"
         >
-          <source src="manjeera school.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
 
-        {/* Dark Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+  {/* Right Column - Video Card */}
+  <div className="relative z-10 w-full hidden lg:flex lg:w-1/2 flex items-center justify-center p-6 sm:p-8">
+    <div className="w-full aspect-video rounded-2xl shadow-xl overflow-hidden border-4 border-white/20">
+      <video
+        className="w-full h-full object-cover"
+        autoPlay
+        loop
+        controls
+        playsInline
+        poster="manjeera-school/video-thumbnail.png"
+      >
+        <source src="manjeera-school/manjeera school.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 text-center px-4">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
-            Manjeera High School
-          </h2>
-          <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-lg">
-            Nurturing young minds
-          </p>
-          <a
-            href="#contact"
-            className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-semibold shadow-lg"
-          >
-            Get in Touch
-          </a>
+  {/* Mobile Background Video (for smaller screens) */}
+  <div className="lg:hidden absolute inset-0">
+    <video
+      className="w-full h-full object-cover"
+      autoPlay
+      loop
+      muted
+      playsInline
+      poster="manjeera-school/video-thumbnail.png"
+    >
+      <source src="manjeera-school/manjeera school.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div className="absolute inset-0 bg-black/50"></div>
+  </div>
+</section>
+    
+      {/* Correspondent Desk Section */}
+      <section id="about" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Text Content First */}
+            <div className="order-2 lg:order-1 animate-on-scroll fade-in-left">
+              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <h2 className="text-4xl font-bold text-blue-900 mb-6 leading-tight">
+                  From the Correspondent's Desk
+                </h2>
+                <div className="w-20 h-1 bg-orange-500 mb-6"></div>
+                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                  Our Correspondent, <span className="font-semibold text-blue-800">Mr. Rajesh Kumar</span>, has been dedicated to ensuring the smooth functioning and progress of the school. His vision and guidance have been pivotal in fostering an environment of academic excellence and ethical values.
+                </p>
+                <p className="text-gray-700 mb-8 leading-relaxed text-lg">
+                  He is committed to providing the best resources and opportunities for students, encouraging innovation and holistic development that prepares them for tomorrow's challenges.
+                </p>
+                <div className="flex items-center space-x-3 text-orange-600">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-medium">Leading with Vision & Excellence</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Image Second */}
+            <div className="order-1 lg:order-2 animate-on-scroll fade-in-right">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-400 to-blue-500 rounded-3xl transform rotate-3"></div>
+                <div className="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:rotate-1 transition-all duration-500">
+                  <img 
+                    src="manjeera-school/sir.jpeg" 
+                    alt="Mr. Rajesh Kumar - Correspondent" 
+                    className="w-full h-auto rounded-2xl object-cover"
+                    style={{ aspectRatio: '4/5' }}
+                  />
+                  <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4">
+                    <h3 className="font-bold text-gray-900">Mr. Rajesh Kumar</h3>
+                    <p className="text-sm text-gray-600">Correspondent</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="rounded-lg overflow-hidden shadow-lg animate-on-scroll fade-in-left">
-              <img src="https://scontent.fhyd1-3.fna.fbcdn.net/v/t39.30808-6/298791383_446894427455361_4110249990567279366_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=lpAklvTHjNMQ7kNvwH1GVFW&_nc_oc=Adm1tcsFa82hRICO_EFNSOZPDsPEPmY4GLfnOviPFEaWDNK6gn6esb_xRTJ0VxoHdAw&_nc_zt=23&_nc_ht=scontent.fhyd1-3.fna&_nc_gid=9S-3OGp9slKllZTg_xq0rA&oh=00_AfYIC0CXmDCQyok2wUjFJrD3C-3KvHYU7pJpkgCjLEL6Mg&oe=68C5B469" alt="Manjeera High School Campus" className="w-full h-auto transform hover:scale-105 transition-transform duration-500" />
+      {/* Principal Desk Section */}
+      <section id="principal" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image First */}
+            <div className="order-1 animate-on-scroll fade-in-left">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-purple-500 rounded-3xl transform -rotate-3"></div>
+                <div className="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:-rotate-1 transition-all duration-500">
+                  <img 
+                    src="https://static.vecteezy.com/system/resources/previews/003/337/511/non_2x/default-avatar-photo-placeholder-profile-icon-female-vector.jpg" 
+                    alt="Mrs. Sita Reddy - Principal" 
+                    className="w-full h-auto rounded-2xl object-cover"
+                    style={{ aspectRatio: '4/5' }}
+                  />
+                  <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4">
+                    <h3 className="font-bold text-gray-900">Mrs. Sita Reddy</h3>
+                    <p className="text-sm text-gray-600">Principal</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="animate-on-scroll fade-in-right">
-              <h2 className="text-3xl font-bold text-blue-900 mb-6">About Our School</h2>
-              <p className="text-gray-600 mb-4">
-                Established in 1995, Manjeera High School has been a beacon of excellence in education for over 25 years. 
-                We believe in nurturing young minds through a holistic approach that balances academic rigor with character development.
-              </p>
-              <p className="text-gray-600 mb-4">
-                Our campus has state-of-the-art facilities including smart classrooms, science and computer labs, and extensive sports facilities.
-              </p>
-              <p className="text-gray-600 mb-6">
-                We follow the State Board curriculum while incorporating innovative teaching methodologies that encourage critical thinking, 
-                creativity, and collaboration among students.
-              </p>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                Learn More
-              </button>
+            
+            {/* Text Content Second */}
+            <div className="order-2 animate-on-scroll fade-in-right">
+              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <h2 className="text-4xl font-bold text-blue-900 mb-6 leading-tight">
+                  From the Principal's Desk
+                </h2>
+                <div className="w-20 h-1 bg-purple-500 mb-6"></div>
+                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                  Our Principal, <span className="font-semibold text-blue-800">Mrs. Sita Reddy</span>, leads the school with passion and dedication. She believes in nurturing every student's potential through empathy, discipline, and personalized learning approaches.
+                </p>
+                <p className="text-gray-700 mb-8 leading-relaxed text-lg">
+                  Her leadership focuses on academic achievement, moral development, and building a supportive environment where students can thrive and discover their unique talents.
+                </p>
+                <div className="flex items-center space-x-3 text-purple-600">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="font-medium">Nurturing Excellence & Character</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Academics Section */}
-      <section id="academics" className="py-20 bg-white">
+      <section id="academics" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-on-scroll fade-in-down">
+            <h2 className="text-3xl font-bold text-blue-900 mb-4 relative inline-block">
+              Academics
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              We offer a structured educational journey for every stage of your child's growth.
+             <p>State board education from pre-primary to 10th builds strong basics in key subjects, promotes overall development, and prepares students for future learning and life. It also focuses on values, discipline, and practical skills.</p>
+
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {programs.map((program, index) => {
+              let animationClass = "fade-in-up";
+              if (index % 3 === 0) {
+                animationClass = "fade-in-left";
+              } else if (index % 3 === 2) {
+                animationClass = "fade-in-right";
+              }
+              return(
+                <div key={index} className={`bg-white rounded-lg overflow-hidden shadow-lg card-hover animate-on-scroll ${animationClass}`} style={{'--stagger': index}}>
+                  <div className="h-48 overflow-hidden">
+                    <img src={program.image} alt={program.title} className="w-full h-full object-cover image-zoom" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-blue-900 mb-3">{program.title}</h3>
+                    <p className="text-gray-600">{program.description}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section id="extracurricular" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll fade-in-down">
             <h2 className="text-3xl font-bold text-blue-900 mb-4 relative inline-block">
@@ -509,39 +697,7 @@ const ManjeeraSchoolWebsite = () => {
         </div>
       </section>
 
-      <section id="programs" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-on-scroll fade-in-down">
-            <h2 className="text-3xl font-bold text-blue-900 mb-4 relative inline-block">
-              Our Programs
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              We offer a structured educational journey for every stage of your child's growth.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {programs.map((program, index) => {
-              let animationClass = "fade-in-up";
-              if (index % 3 === 0) {
-                animationClass = "fade-in-left";
-              } else if (index % 3 === 2) {
-                animationClass = "fade-in-right";
-              }
-              return(
-                <div key={index} className={`bg-white rounded-lg overflow-hidden shadow-lg card-hover animate-on-scroll ${animationClass}`} style={{'--stagger': index}}>
-                  <div className="h-48 overflow-hidden">
-                    <img src={program.image} alt={program.title} className="w-full h-full object-cover image-zoom" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-blue-900 mb-3">{program.title}</h3>
-                    <p className="text-gray-600">{program.description}</p>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Achievements Section */}
       <section id="achievements" className="py-20 bg-white">
