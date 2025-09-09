@@ -632,7 +632,7 @@ const ManjeeraSchoolWebsite = () => {
             <div className="flex flex-col md:flex-row justify-between gap-10 max-w-6xl mx-auto">
               
               {/* Left Column */}
-              <div className="flex-1 min-w-[300px] animate-on-scroll fade-in-left">
+              <div className="flex-1 animate-on-scroll fade-in-left">
                 {/* Tabs */}
                 <div className="flex mb-6">
                   <button
@@ -653,7 +653,7 @@ const ManjeeraSchoolWebsite = () => {
                         : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                     }`}
                   >
-                    Admission Enquiry
+                    Admission
                   </button>
                 </div>
 
@@ -686,7 +686,7 @@ const ManjeeraSchoolWebsite = () => {
                     <textarea
                       name="Message"
                       required
-                      className="w-full p-2 mb-3 border border-gray-300 rounded-md focus:border-blue-500 min-h-[100px] text-sm form-input"
+                      className="w-full p-2 mb-3 border border-gray-300 rounded-md focus:border-blue-500 text-sm form-input"
                     ></textarea>
 
                     <button
@@ -755,7 +755,7 @@ const ManjeeraSchoolWebsite = () => {
                     </label>
                     <textarea
                       name="Details"
-                      className="w-full p-2 mb-3 border border-gray-300 rounded-md focus:border-blue-500 min-h-[80px] text-sm form-input"
+                      className="w-full p-2 mb-3 border border-gray-300 rounded-md focus:border-blue-500 text-sm form-input"
                     ></textarea>
 
                     <button
@@ -791,7 +791,7 @@ const ManjeeraSchoolWebsite = () => {
               </div>
 
               {/* Right Column: Map */}
-              <div className="flex-1 min-w-[300px] animate-on-scroll fade-in-right">
+              <div className="flex-1 animate-on-scroll fade-in-right">
                 <div className="w-full h-full rounded-md overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d336.28319607732095!2d78.26536467669068!3d17.526118394229915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf29304fee6a9%3A0x143cbe51023fe1f4!2sManjeera%20High%20School!5e0!3m2!1sen!2sin!4v1757403177314!5m2!1sen!2sin"
