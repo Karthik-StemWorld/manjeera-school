@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/manjeera-school/static/css/main.afafef79.css",
-    "main.js": "/manjeera-school/static/js/main.1f16cf0b.js",
+    "main.css": "/manjeera-school/static/css/main.01bc5c79.css",
+    "main.js": "/manjeera-school/static/js/main.85e1a4d4.js",
     "static/js/453.279ed6a5.chunk.js": "/manjeera-school/static/js/453.279ed6a5.chunk.js",
     "static/media/fa-solid-900.woff2": "/manjeera-school/static/media/fa-solid-900.0ae4e6254fc19607c79e.woff2",
     "static/media/fa-brands-400.woff2": "/manjeera-school/static/media/fa-brands-400.e7461d69dbbff1310a5c.woff2",
     "static/media/fa-regular-400.woff2": "/manjeera-school/static/media/fa-regular-400.1f38a564cd9eae27ebc3.woff2",
     "static/media/fa-v4compatibility.woff2": "/manjeera-school/static/media/fa-v4compatibility.661bd6b7245d5205d3e1.woff2",
     "index.html": "/manjeera-school/index.html",
-    "main.afafef79.css.map": "/manjeera-school/static/css/main.afafef79.css.map",
-    "main.1f16cf0b.js.map": "/manjeera-school/static/js/main.1f16cf0b.js.map",
+    "main.01bc5c79.css.map": "/manjeera-school/static/css/main.01bc5c79.css.map",
+    "main.85e1a4d4.js.map": "/manjeera-school/static/js/main.85e1a4d4.js.map",
     "453.279ed6a5.chunk.js.map": "/manjeera-school/static/js/453.279ed6a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afafef79.css",
-    "static/js/main.1f16cf0b.js"
+    "static/css/main.01bc5c79.css",
+    "static/js/main.85e1a4d4.js"
   ]
 }
