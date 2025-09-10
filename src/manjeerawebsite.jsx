@@ -532,98 +532,95 @@ const ManjeeraSchoolWebsite = () => {
       </section>
     
       {/* Correspondent Desk Section */}
-      <section id="about" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
-            {/* Text Content First */}
-            <div className="order-2 lg:order-1 animate-on-scroll fade-in-left">
-              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between">
-                <h2 className="text-4xl font-bold text-blue-900 mb-6 leading-tight">
-                  From the Correspondent's Desk
-                </h2>
-                <div className="w-20 h-1 bg-orange-500 mb-6"></div>
-                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  Our Correspondent, <span className="font-semibold text-blue-800">Mr. Sudhakar Reddy</span>, has been dedicated to ensuring the smooth functioning and progress of the school. His vision and guidance have been pivotal in fostering an environment of academic excellence and ethical values.
-                </p>
-                <p className="text-gray-700 mb-8 leading-relaxed text-lg">
-                  He is committed to providing the best resources and opportunities for students, encouraging innovation and holistic development that prepares them for tomorrow's challenges.
-                </p>
-                <div className="flex items-center space-x-3 text-orange-600">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-medium">Leading with Vision & Excellence</span>
+      <div className="py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
+        {/* Correspondent Section */}
+        <section id="about" className="bg-gradient-to-br from-gray-50 to-blue-50 py-8 rounded-lg mx-4 mb-12">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="grid lg:grid-cols-3 gap-8 items-center">
+              {/* Image */}
+              <div className="lg:col-span-1 animate-on-scroll fade-in-left">
+                <div className="relative w-full max-w-xs mx-auto">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-orange-400 to-blue-500 rounded-2xl transform rotate-2"></div>
+                  <div className="relative bg-white p-2 rounded-2xl shadow-xl transform hover:rotate-1 transition-all duration-300">
+                    <img 
+                      src="manjeera-school/sir.jpeg" 
+                      alt="Mr. Sudhakar Reddy - Correspondent" 
+                      className="w-full h-64 rounded-xl object-cover"
+                    />
+                    <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg p-3">
+                      <h3 className="font-bold text-gray-900 text-sm">Mr. Sudhakar Reddy</h3>
+                      <p className="text-xs text-gray-600">Correspondent</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Image Second */}
-            <div className="order-1 lg:order-2 animate-on-scroll fade-in-right">
-              <div className="relative w-full h-full mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-400 to-blue-500 rounded-3xl transform rotate-3"></div>
-                <div className="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:rotate-1 transition-all duration-500 w-full h-full">
-                  <img 
-                    src="manjeera-school/sir.jpeg" 
-                    alt="Mr. Sudhakar Reddy - Correspondent" 
-                    className="w-full h-full rounded-2xl object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4">
-                    <h3 className="font-bold text-gray-900">Mr. Sudhakar Reddy</h3>
-                    <p className="text-sm text-gray-600">Correspondent</p>
+              
+              {/* Text Content */}
+              <div className="lg:col-span-2 animate-on-scroll fade-in-right">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <h2 className="text-2xl font-bold text-blue-900 mb-4">
+                    From the Correspondent's Desk
+                  </h2>
+                  <div className="w-16 h-1 bg-orange-500 mb-4"></div>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Our Correspondent, <span className="font-semibold text-blue-800">Mr. Sudhakar Reddy</span>, has been dedicated to ensuring the smooth functioning and progress of the school. His vision and guidance have been pivotal in fostering an environment of academic excellence and ethical values.
+                  </p>
+                  <div className="flex items-center space-x-2 text-orange-600">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-medium text-sm">Leading with Vision & Excellence</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Principal Desk Section */}
-      <section id="principal" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
-            {/* Image First */}
-            <div className="order-1 animate-on-scroll fade-in-left">
-              <div className="relative w-full h-full mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-purple-500 rounded-3xl transform -rotate-3"></div>
-                <div className="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:-rotate-1 transition-all duration-500 w-full h-full">
-                  <img 
-                    src="https://static.vecteezy.com/system/resources/previews/003/337/511/non_2x/default-avatar-photo-placeholder-profile-icon-female-vector.jpg" 
-                    alt="Mrs. Anuradha - Principal" 
-                    className="w-full h-full rounded-2xl object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4">
-                    <h3 className="font-bold text-gray-900">Mrs. Anuradha</h3>
-                    <p className="text-sm text-gray-600">Principal</p>
+        {/* Principal Section */}
+        <section id="principal" className="bg-gradient-to-br from-gray-50 to-blue-50 py-8 rounded-lg mx-4">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="grid lg:grid-cols-3 gap-8 items-center">
+              {/* Text Content First for alternating layout */}
+              <div className="lg:col-span-2 order-2 lg:order-1 animate-on-scroll fade-in-left">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <h2 className="text-2xl font-bold text-blue-900 mb-4">
+                    From the Principal's Desk
+                  </h2>
+                  <div className="w-16 h-1 bg-purple-500 mb-4"></div>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Our Principal, <span className="font-semibold text-blue-800">Mrs. Anuradha</span>, leads the school with passion and dedication. She believes in nurturing every student's potential through empathy, discipline, and personalized learning approaches.
+                  </p>
+                  <div className="flex items-center space-x-2 text-purple-600">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="font-medium text-sm">Nurturing Excellence & Character</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Image */}
+              <div className="lg:col-span-1 order-1 lg:order-2 animate-on-scroll fade-in-right">
+                <div className="relative w-full max-w-xs mx-auto">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-purple-500 rounded-2xl transform -rotate-2"></div>
+                  <div className="relative bg-white p-2 rounded-2xl shadow-xl transform hover:-rotate-1 transition-all duration-300">
+                    <img 
+                      src="https://static.vecteezy.com/system/resources/previews/003/337/511/non_2x/default-avatar-photo-placeholder-profile-icon-female-vector.jpg" 
+                      alt="Mrs. Anuradha - Principal" 
+                      className="w-full h-64 rounded-xl object-cover"
+                    />
+                    <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg p-3">
+                      <h3 className="font-bold text-gray-900 text-sm">Mrs. Anuradha</h3>
+                      <p className="text-xs text-gray-600">Principal</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
-            {/* Text Content Second */}
-            <div className="order-2 animate-on-scroll fade-in-right">
-              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between">
-                <h2 className="text-4xl font-bold text-blue-900 mb-6 leading-tight">
-                  From the Principal's Desk
-                </h2>
-                <div className="w-20 h-1 bg-purple-500 mb-6"></div>
-                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  Our Principal, <span className="font-semibold text-blue-800">Mrs. Anuradha</span>, leads the school with passion and dedication. She believes in nurturing every student's potential through empathy, discipline, and personalized learning approaches.
-                </p>
-                <p className="text-gray-700 mb-8 leading-relaxed text-lg">
-                  Her leadership focuses on academic achievement, moral development, and building a supportive environment where students can thrive and discover their unique talents.
-                </p>
-                <div className="flex items-center space-x-3 text-purple-600">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="font-medium">Nurturing Excellence & Character</span>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Academics Section */}
       <section id="academics" className="py-20 bg-gray-50">
