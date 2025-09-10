@@ -5,7 +5,8 @@ const activities = [
   { title: "Music", description: "Discover the world of music with instrument training, vocal lessons, and music theory.", image: "manjeera-school/Music.jpeg" },
   { title: "Robotics & AI", description: "Build and program robots to solve challenges and Explore the fundamentals of Artificial Intelligence.", image: "manjeera-school/Robotics.jpeg" },
   { title: "Sports", description: "Our sports programs promote physical health, discipline, and a spirit of sportsmanship.", image: "manjeera-school/Sports.jpeg" },
-  { title: "Abacus Classes", description: "Develop mental math skills and improve concentration with our Abacus training.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSIjjZ3WThvZ8-isCAt3Rdd2SR4a6GzAFMOg&s" }
+  { title: "Abacus Classes", description: "Develop mental math skills and improve concentration with our Abacus training.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSIjjZ3WThvZ8-isCAt3Rdd2SR4a6GzAFMOg&s" },
+  { title: "IIT & AI Classes", description: "Our IIT & AI classes offer expert guidance and learning to help students excel in competitive exams.", image: "manjeera-school/IIT.png" },
 ];
 
 const programs = [
@@ -48,7 +49,7 @@ const news = [
     
     title: "Annual Sports Day",
     description: "Annual sports day was conducted with great enthusiasm and participation from students.",
-    image: "manjeera-school/Annual.jpeg"
+    image: "manjeera-school/Sports-day.jpeg"
   },
 ]
 
@@ -448,101 +449,101 @@ const ManjeeraSchoolWebsite = () => {
 
       {/* Hero Section */}
       <section
-  className="relative h-screen w-full flex flex-col lg:flex-row items-center justify-between overflow-hidden hero-bg"
-  id="home"
->
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/40 z-0"></div>
-
-  {/* Left Column - Hero Content */}
-  <div className="relative z-10 w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-10 lg:p-16">
-    <div className="text-white max-w-xl hero-text">
-      {/* School Title */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">
-        Manjeera High School
-      </h2>
-
-      {/* Tagline */}
-      <p className="text-lg sm:text-xl md:text-2xl mb-6 text-blue-100 font-medium drop-shadow">
-        Nurturing Young Minds
-      </p>
-
-      {/* About */}
-      <div className="mb-6 space-y-4 text-sm sm:text-base text-blue-50">
-        <p>
-          Established in 1995, we've been a beacon of excellence in education
-          for over 25 years, nurturing young minds through a holistic approach
-          that balances academics with character development.
-        </p>
-        <p>
-          Our campus features smart classrooms, science & computer labs, and
-          extensive sports facilities.
-        </p>
-        <p>
-          We follow the State Board curriculum with innovative teaching
-          methodologies that encourage creativity and collaboration.
-        </p>
-      </div>
-
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 hero-buttons">
-        <a
-          href="#contact"
-          className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-semibold shadow-lg text-center"
-        >
-          Get in Touch
-        </a>
-      </div>
-    </div>
-  </div>
-
-  {/* Right Column - Video Card */}
-  <div className="relative z-10 w-full hidden lg:flex lg:w-1/2 flex items-center justify-center p-6 sm:p-8">
-    <div className="w-full aspect-video rounded-2xl shadow-xl overflow-hidden border-4 border-white/20">
-      <video
-        className="w-full h-full object-cover"
-        autoPlay
-        loop
-        controls
-        playsInline
-        poster="manjeera-school/video-thumbnail.png"
+        className="relative h-max lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between overflow-hidden hero-bg"
+        id="home"
       >
-        <source src="manjeera-school/manjeera school.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-  {/* Mobile Background Video (for smaller screens) */}
-  <div className="lg:hidden absolute inset-0">
-    <video
-      className="w-full h-full object-cover"
-      autoPlay
-      loop
-      muted
-      playsInline
-      poster="manjeera-school/video-thumbnail.png"
-    >
-      <source src="manjeera-school/manjeera school.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div className="absolute inset-0 bg-black/50"></div>
-  </div>
-</section>
+        {/* Left Column - Hero Content */}
+        <div className="relative z-10 w-full lg:w-[40%] flex items-center justify-center p-6 sm:p-10 lg:p-16">
+          <div className="text-white max-w-xl hero-text">
+            {/* School Title */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">
+              Manjeera High School
+            </h2>
+
+            {/* Tagline */}
+            <p className="text-lg sm:text-xl md:text-2xl mb-6 text-blue-100 font-medium drop-shadow">
+              Nurturing Young Minds
+            </p>
+
+            {/* About */}
+            <div className="mb-6 space-y-4 text-sm sm:text-base text-blue-50 text-justify">
+              <p>
+                Established in 1995, we've been a beacon of excellence in education
+                for over 30 years, nurturing young minds through a holistic approach
+                that balances academics with character development.
+              </p>
+              <p>
+                Our campus features smart classrooms, science & computer labs, and
+                extensive sports facilities.
+              </p>
+              <p>
+                We follow the State Board curriculum with innovative teaching
+                methodologies that encourage creativity and collaboration.
+              </p>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 hero-buttons">
+              <a
+                href="#contact"
+                className="inline-block bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-3 rounded-full font-semibold shadow-lg text-center"
+              >
+                Get in Touch
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - Video Card */}
+        <div className="relative z-10 w-full hidden lg:flex lg:w-[60%] flex items-center justify-center p-6 sm:p-8">
+          <div className="w-full aspect-video rounded-2xl shadow-xl overflow-hidden border-4 border-white/20">
+            <video
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              controls
+              playsInline
+              poster="manjeera-school/video-thumbnail.png"
+            >
+              <source src="manjeera-school/manjeera school.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        {/* Mobile Background Video (for smaller screens) */}
+        <div className="lg:hidden absolute inset-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="manjeera-school/video-thumbnail.png"
+          >
+            <source src="manjeera-school/manjeera school.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+      </section>
     
       {/* Correspondent Desk Section */}
       <section id="about" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             {/* Text Content First */}
             <div className="order-2 lg:order-1 animate-on-scroll fade-in-left">
-              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between">
                 <h2 className="text-4xl font-bold text-blue-900 mb-6 leading-tight">
                   From the Correspondent's Desk
                 </h2>
                 <div className="w-20 h-1 bg-orange-500 mb-6"></div>
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  Our Correspondent, <span className="font-semibold text-blue-800">Mr. Rajesh Kumar</span>, has been dedicated to ensuring the smooth functioning and progress of the school. His vision and guidance have been pivotal in fostering an environment of academic excellence and ethical values.
+                  Our Correspondent, <span className="font-semibold text-blue-800">Mr. Sudhakar Reddy</span>, has been dedicated to ensuring the smooth functioning and progress of the school. His vision and guidance have been pivotal in fostering an environment of academic excellence and ethical values.
                 </p>
                 <p className="text-gray-700 mb-8 leading-relaxed text-lg">
                   He is committed to providing the best resources and opportunities for students, encouraging innovation and holistic development that prepares them for tomorrow's challenges.
@@ -558,17 +559,16 @@ const ManjeeraSchoolWebsite = () => {
             
             {/* Image Second */}
             <div className="order-1 lg:order-2 animate-on-scroll fade-in-right">
-              <div className="relative">
+              <div className="relative w-full h-full mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-400 to-blue-500 rounded-3xl transform rotate-3"></div>
-                <div className="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:rotate-1 transition-all duration-500">
+                <div className="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:rotate-1 transition-all duration-500 w-full h-full">
                   <img 
                     src="manjeera-school/sir.jpeg" 
-                    alt="Mr. Rajesh Kumar - Correspondent" 
-                    className="w-full h-auto rounded-2xl object-cover"
-                    style={{ aspectRatio: '4/5' }}
+                    alt="Mr. Sudhakar Reddy - Correspondent" 
+                    className="w-full h-full rounded-2xl object-cover"
                   />
                   <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4">
-                    <h3 className="font-bold text-gray-900">Mr. Rajesh Kumar</h3>
+                    <h3 className="font-bold text-gray-900">Mr. Sudhakar Reddy</h3>
                     <p className="text-sm text-gray-600">Correspondent</p>
                   </div>
                 </div>
@@ -581,20 +581,19 @@ const ManjeeraSchoolWebsite = () => {
       {/* Principal Desk Section */}
       <section id="principal" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             {/* Image First */}
             <div className="order-1 animate-on-scroll fade-in-left">
-              <div className="relative">
+              <div className="relative w-full h-full mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-purple-500 rounded-3xl transform -rotate-3"></div>
-                <div className="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:-rotate-1 transition-all duration-500">
+                <div className="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:-rotate-1 transition-all duration-500 w-full h-full">
                   <img 
                     src="https://static.vecteezy.com/system/resources/previews/003/337/511/non_2x/default-avatar-photo-placeholder-profile-icon-female-vector.jpg" 
-                    alt="Mrs. Sita Reddy - Principal" 
-                    className="w-full h-auto rounded-2xl object-cover"
-                    style={{ aspectRatio: '4/5' }}
+                    alt="Mrs. Anuradha - Principal" 
+                    className="w-full h-full rounded-2xl object-cover"
                   />
                   <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4">
-                    <h3 className="font-bold text-gray-900">Mrs. Sita Reddy</h3>
+                    <h3 className="font-bold text-gray-900">Mrs. Anuradha</h3>
                     <p className="text-sm text-gray-600">Principal</p>
                   </div>
                 </div>
@@ -603,13 +602,13 @@ const ManjeeraSchoolWebsite = () => {
             
             {/* Text Content Second */}
             <div className="order-2 animate-on-scroll fade-in-right">
-              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between">
                 <h2 className="text-4xl font-bold text-blue-900 mb-6 leading-tight">
                   From the Principal's Desk
                 </h2>
                 <div className="w-20 h-1 bg-purple-500 mb-6"></div>
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  Our Principal, <span className="font-semibold text-blue-800">Mrs. Sita Reddy</span>, leads the school with passion and dedication. She believes in nurturing every student's potential through empathy, discipline, and personalized learning approaches.
+                  Our Principal, <span className="font-semibold text-blue-800">Mrs. Anuradha</span>, leads the school with passion and dedication. She believes in nurturing every student's potential through empathy, discipline, and personalized learning approaches.
                 </p>
                 <p className="text-gray-700 mb-8 leading-relaxed text-lg">
                   Her leadership focuses on academic achievement, moral development, and building a supportive environment where students can thrive and discover their unique talents.
